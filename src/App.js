@@ -3,23 +3,24 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const AlertBtn = ({ alertFunction, btnMsg})=>{
-return(
-<>
-  <button onClick={alertFunction}>{btnMsg}</button>
-</>
+const AlertBtn = ({ alertFunction, btnMsg }) => {
+  return (
+    <>
+      <button onClick={alertFunction}>{btnMsg}</button>
+    </>
 
-);};
+  );
+};
 
 
 
 function App() {
-const [mostrar, setmostrar] = useState(false);
-const mostrarAlerta = ()=>{
-alert('You clicked me!');
+  const [mostrar, setmostrar] = useState(false);
+  const mostrarAlerta = () => {
+    alert('You clicked me!');
 
 
-};
+  };
 
 
   return (
@@ -32,17 +33,17 @@ alert('You clicked me!');
 
 
 
-<div className="carta">
-  {mostrar && <p>Boo!</p>}
-  <button onClick={()=> setmostrar((mostrar) => !mostrar)} className='clickclick'>Cl1ck m3!</button>
-  <AlertBtn
-  
-  alertFunction={mostrarAlerta}
-  btnMsg={'mostrar alerta'}
-  
-  
-  ></AlertBtn>
-</div>
+        <div className="carta">
+          {mostrar && <p>Boo!</p>}
+          <button onClick={() => setmostrar((mostrar) => !mostrar)} className='clickclick'>Cl1ck m3!</button>
+          <AlertBtn
+
+            alertFunction={mostrarAlerta}
+            btnMsg={'mostrar alerta'}
+
+
+          ></AlertBtn>
+        </div>
 
 
         <a
