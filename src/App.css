@@ -1,3 +1,11 @@
+:root{
+
+--reactblues: #61dafb;
+
+
+}
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +43,23 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.clickclick{
+
+background-color: #282c34;
+color: white;
+font-size: large;
+border: solid var(--reactblues) 1px;
+border-radius: 10%;
+margin-bottom: 20px;
+
+
+}
+.clickclick:hover{
+
+background-color: rgba(250, 235, 215, 0.338);
+
+
+
 }
