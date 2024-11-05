@@ -51,11 +51,12 @@ background-color: #282c34;
 color: white;
 font-size: large;
 border: solid var(--reactblues) 1px;
-border-radius: 10%;
+border-radius: 10px;
 margin-bottom: 20px;
 
 
 }
+
 .clickclick:hover{
 
 background-color: rgba(250, 235, 215, 0.338);

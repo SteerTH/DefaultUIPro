@@ -1,31 +1,26 @@
 import { useState } from 'react';
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
-
-const AlertBtn = ({ alertFunction, btnMsg }) => {
-  return (
-    <>
-      <button onClick={alertFunction}>{btnMsg}</button>
-    </>
-
-  );
-};
+import './Styles.css';
+import AlertBtn from './Alertcomp';
+import Greeting from './greeting';
 
 
 
 function App() {
-  const [mostrar, setmostrar] = useState(false);
-  const mostrarAlerta = () => {
-    alert('You clicked me!');
+const [mostrar, setmostrar] = useState(false);
+const mostrarAlerta = ()=>{
+alert('You clicked me!');
 
 
-  };
+};
 
 
   return (
+    
     <div className="App">
       <header className="App-header">
+      <Greeting name="Johnny"></Greeting>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -33,18 +28,13 @@ function App() {
 
 
 
-        <div className="carta">
-          {mostrar && <p>Boo!</p>}
-          <button onClick={() => setmostrar((mostrar) => !mostrar)} className='clickclick'>Cl1ck m3!</button>
-          <AlertBtn
+<div className="carta">
+  {mostrar && <p>Boo!</p>}
+  <button onClick={()=> setmostrar((mostrar) => !mostrar)} className='clickclick'>Cl1ck m3!</button>
+  
+</div>
 
-            alertFunction={mostrarAlerta}
-            btnMsg={'mostrar alerta'}
-
-
-          ></AlertBtn>
-        </div>
-
+<AlertBtn></AlertBtn>
 
         <a
           className="App-link"
